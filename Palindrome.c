@@ -1,21 +1,21 @@
 #include<stdio.h>
-int reverse(int num)
-{
-	int r,rev=0;
-	while(num)
-	{
-		r=num%10;
-		rev=rev*10+r;
-		num=num/10;
-	}
-	return rev;
-}
 int main()
 {
-	int n;
-	scanf("%d",&n);
-	if(reverse(n)==n)
-	printf("True");
-	else
-	printf("False");
+    int n,r,k,rev=0;
+    scanf("%d",&n);
+    k=n;
+    while(n>0)
+    {
+        r=n%10;
+        rev=rev*10+r;
+        n/=10;
+    }
+    if(k==rev)
+    {
+        printf("True");
+    }
+    else
+    {
+        printf("False");
+    }
 }
