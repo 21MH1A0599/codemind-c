@@ -1,9 +1,9 @@
 #include<stdio.h>
 int main()
 {
-    int r,c,i,j,max=0,max1=0;
+    int r,c,i,j,m1=0,m2=0;
     scanf("%d %d",&r,&c);
-    int arr[r][c],s1=0,s2=0;
+    int arr[r][c],s1,s2;
     for(i=0;i<r;i++)
     {
         for(j=0;j<c;j++)
@@ -18,9 +18,9 @@ int main()
         {
             s1+=arr[i][j];
         }
-        if(s1>max)
+        if(s1>m1)
         {
-            max=s1;
+            m1=s1;
         }
     }
     for(j=0;j<c;j++)
@@ -30,17 +30,17 @@ int main()
         {
             s2+=arr[i][j];
         }
-        if(s2>max1)
+        if(s2>m2)
         {
-            max1=s2;
+            m2=s2;
         }
     }
-    if(max>max1)
+    if(m1>m2)
     {
-        printf("%d",max);
+        printf("%d",m1);
     }
     else
     {
-        printf("%d",max1);
+        printf("%d",m2);
     }
 }
