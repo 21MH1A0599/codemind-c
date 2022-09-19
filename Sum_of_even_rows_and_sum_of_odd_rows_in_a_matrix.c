@@ -21,7 +21,7 @@ int main()
             }
             else
             {
-            s2+=a[i][j];
+                s2+=a[i][j];
             }
         }
     }
